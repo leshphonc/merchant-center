@@ -1,0 +1,24 @@
+.header_img {
+  width: 100%;
+  height: 200px;
+}
+
+.icon {
+  width: 100%;
+  text-align: center;
+  & > img {
+    width: 60px;
+  }
+}
+
+.desc {
+  background: #ccc;
+  text-align: center;
+  padding: 10px 5px;
+  border-right: 1px solid #fff;
+  &>div:nth-child(2) {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 5px
+  }
+}

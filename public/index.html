@@ -3,7 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no"
+    />
     <meta name="theme-color" content="#000000" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -20,6 +23,25 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <script>
+      //  var width = document.documentElement.clientWidth
+      //  var fontSize / 100 = width / 750
+      //  document.documentElement.style.fontSize = fontSize + 'px'
+      // !(function(n) {
+      //   var e = n.document,
+      //     t = e.documentElement,
+      //     i = 750,
+      //     d = i / 100,
+      //     o = 'orientationchange' in n ? 'orientationchange' : 'resize',
+      //     a = function() {
+      //       var n = t.clientWidth || 375
+      //       n > 750 && (n = 750), (t.style.fontSize = n / d + 'px')
+      //     }
+      //   e.addEventListener &&
+      //     (n.addEventListener(o, a, !1),
+      //     e.addEventListener('DOMContentLoaded', a, !1))
+      // })(window)
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
