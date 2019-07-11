@@ -5,9 +5,11 @@ import Grid from '@material-ui/core/Grid'
 import ReactEcharts from 'echarts-for-react'
 import styles from './index.module.scss'
 import UserCard from '../UserCard'
+import GridCard from '../GridCard'
+import { ManagementGrid, PromotionGrid, AllianceGrid } from '../../env/constant'
 
 const useStyles = makeStyles(() => createStyles({
-  root: {
+  paper: {
     marginTop: 10,
   },
 }))
@@ -31,7 +33,20 @@ export default () => {
     xAxis: [
       {
         type: 'category',
-        data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+        data: [
+          '1月',
+          '2月',
+          '3月',
+          '4月',
+          '5月',
+          '6月',
+          '7月',
+          '8月',
+          '9月',
+          '10月',
+          '11月',
+          '12月',
+        ],
         axisPointer: {
           type: 'shadow',
         },
@@ -81,36 +96,15 @@ export default () => {
 
   const classes = useStyles()
   return (
-    <React.Fragment>
+    <div className="bottom60">
       <img
         src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562754524381&di=98cdda464f35e7cc90edfa629389f23f&imgtype=0&src=http%3A%2F%2Fpic.rmb.bdstatic.com%2Fcd2476300bbad8dfcfff1d277b79401a.jpeg"
         alt=""
         className={styles.header_img}
       />
       <UserCard />
-      <Paper className={classes.root}>
-        <Grid container style={{ padding: '30px 0' }}>
-          <Grid item xs={3}>
-            <div className={styles.icon}>
-              <img src={require('../../assets/image/avatar.jpeg')} alt="" />
-            </div>
-          </Grid>
-          <Grid item xs={3}>
-            <div className={styles.icon}>
-              <img src={require('../../assets/image/avatar.jpeg')} alt="" />
-            </div>
-          </Grid>
-          <Grid item xs={3}>
-            <div className={styles.icon}>
-              <img src={require('../../assets/image/avatar.jpeg')} alt="" />
-            </div>
-          </Grid>
-          <Grid item xs={3}>
-            <div className={styles.icon}>
-              <img src={require('../../assets/image/avatar.jpeg')} alt="" />
-            </div>
-          </Grid>
-        </Grid>
+      <Paper className={classes.paper}>
+        <GridCard data={ManagementGrid} style={{ padding: '30px 0' }} />
         <Grid container wrap="nowrap">
           <Grid item xs={3}>
             <div className={styles.desc}>
@@ -143,8 +137,14 @@ export default () => {
             </div>
           </Grid>
         </Grid>
-        <ReactEcharts option={getOption()} style={{ padding: 10, marginBottom: 30 }} />
+        {/* <ReactEcharts option={getOption()} style={{ padding: 10 }} /> */}
       </Paper>
-    </React.Fragment>
+      <Paper className={classes.paper}>
+        <GridCard data={PromotionGrid} style={{ padding: '0 0 30px 0' }} />
+      </Paper>
+      <Paper className={classes.paper}>
+        <GridCard data={AllianceGrid} style={{ padding: '0 0 30px 0' }} />
+      </Paper>
+    </div>
   )
 }

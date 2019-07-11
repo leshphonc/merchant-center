@@ -1,9 +1,9 @@
 import React from 'react'
 import { makeStyles, createStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
-import Paper from '@material-ui/core/Paper'
 import Avatar from '@material-ui/core/Avatar'
 import SettingsIcon from '@material-ui/icons/Settings'
+import { withRouter } from 'react-router-dom'
 import styles from './index.module.scss'
 
 const useStyles = makeStyles(
@@ -27,26 +27,24 @@ const useStyles = makeStyles(
     },
   }),
 )
-export default () => {
+export default withRouter((props: any) => {
   const classes = useStyles()
   return (
-    <Paper>
-      <Grid container justify="center" alignItems="center" className={styles.container}>
-        <Grid item xs={3}>
-          <Avatar src={require('../../assets/image/avatar.jpeg')} className={classes.avatar} />
-        </Grid>
-        <Grid item xs={9}>
-          <Grid container direction="column" className={styles.desc}>
-            <div>Hi, desing kevin 欢迎回来！</div>
-            <div>账户余额（元）</div>
-            <div>
-              <div>116688.68</div>
-              <div>充值 | 提现</div>
-            </div>
-          </Grid>
-        </Grid>
-        <SettingsIcon className={classes.settings} />
+    <Grid container justify="center" alignItems="center" className={styles.container}>
+      <Grid item xs={3}>
+        <Avatar src={require('../../assets/image/avatar.jpeg')} className={classes.avatar} />
       </Grid>
-    </Paper>
+      <Grid item xs={9}>
+        <Grid container direction="column" className={styles.desc}>
+          <div onClick={() => props.history.goBack()}>Hi, desing kevin 欢迎回来！</div>
+          <div>账户余额（元）</div>
+          <div>
+            <div>116688.68</div>
+            <div>充值 | 提现</div>
+          </div>
+        </Grid>
+      </Grid>
+      <SettingsIcon className={classes.settings} />
+    </Grid>
   )
-}
+})

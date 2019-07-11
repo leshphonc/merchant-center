@@ -1,3 +1,3 @@
 import React from 'react'
 
-export default () => <div>order</div>
+export default () => <div className="bottom60">order</div>
