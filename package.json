@@ -46,5 +46,6 @@
     "customize-cra": "^0.2.14",
     "eslint-config-airbnb": "^17.1.1",
     "react-app-rewired": "^2.1.3"
-  }
+  },
+  "proxy": "https://www.9youke.com"
 }
