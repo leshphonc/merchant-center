@@ -1,11 +1,11 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
-import Navigation from '../components/Navigation'
-import Home from './Home'
-import Order from './Order'
-import Marketing from './Marketing'
-import Mine from './Mine'
+import Navigation from '@/components/Navigation'
+import Home from './home'
+import Order from './order'
+import Marketing from './marketing'
+import Mine from './mine'
 
 let oldLocation: any = null
 export default (props: any) => {

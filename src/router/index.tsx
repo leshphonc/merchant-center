@@ -1,8 +1,8 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import CssBaseline from '@material-ui/core/CssBaseline'
-import Index from '../pages'
-import Login from '../pages/login'
+import Index from '@/pages'
+import Login from '@/pages/login'
 
 const BasicRoute = () => (
   <BrowserRouter>

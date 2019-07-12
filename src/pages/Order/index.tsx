@@ -1,6 +1,6 @@
 import React from 'react'
-import List from '../../components/List'
-import { ListData } from '../../env/constant'
+import List from '@/components/List'
+import { ListData } from '@/env/constant'
 
 const marketing: React.FC = () => (
   <div className="bottom60">

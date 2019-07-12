@@ -1,9 +1,9 @@
 import React from 'react'
 import { makeStyles, createStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
-import UserCard from '../../components/UserCard'
-import GridCard from '../../components/GridCard'
-import { SettingGrid, BusinessGrid, BillGrid } from '../../env/constant'
+import UserCard from '@/components/UserCard'
+import GridCard from '@/components/GridCard'
+import { SettingGrid, BusinessGrid, BillGrid } from '@/env/constant'
 
 const useStyles = makeStyles(
   createStyles({

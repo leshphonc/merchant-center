@@ -3,9 +3,9 @@ import { createStyles, makeStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 import ReactEcharts from 'echarts-for-react'
-import UserCard from '../../components/UserCard'
-import GridCard from '../../components/GridCard'
-import { ManagementGrid, PromotionGrid, AllianceGrid } from '../../env/constant'
+import UserCard from '@/components/UserCard'
+import GridCard from '@/components/GridCard'
+import { ManagementGrid, PromotionGrid, AllianceGrid } from '@/env/constant'
 import styles from './index.module.scss'
 
 const useStyles = makeStyles(() => createStyles({
