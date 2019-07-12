@@ -11,6 +11,7 @@ body {
   padding-bottom: 65px;
   overflow-y: scroll;
   background: #eee;
+  -webkit-overflow-scrolling: touch;
 }
 
 .router-wrapper {

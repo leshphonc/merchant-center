@@ -75,8 +75,8 @@ const PromotionGrid = {
     {
       name: '店员推广',
       url: '8',
-      enable: require('../assets/image/dygl.png'),
-      disable: require('../assets/image/dygl_gray.png'),
+      enable: require('../assets/image/dytg.png'),
+      disable: require('../assets/image/dytg_gray.png'),
     },
   ],
 }
@@ -111,4 +111,189 @@ const AllianceGrid = {
   ],
 }
 
-export { ManagementGrid, PromotionGrid, AllianceGrid }
+const SettingGrid = {
+  title: '商家设置',
+  list: [
+    {
+      name: '基本信息',
+      url: '1',
+      enable: require('../assets/image/jbxx.png'),
+      disable: require('../assets/image/jbxx_gray.png'),
+    },
+    {
+      name: '功能权限',
+      url: '2',
+      enable: require('../assets/image/gnqx.png'),
+      disable: require('../assets/image/gnqx_gray.png'),
+    },
+    {
+      name: '运费设置',
+      url: '3',
+      enable: require('../assets/image/yfsz.png'),
+      disable: require('../assets/image/yfsz_gray.png'),
+    },
+    {
+      name: '配送管理',
+      url: '4',
+      enable: require('../assets/image/psgl.png'),
+      disable: require('../assets/image/psgl_gray.png'),
+    },
+    {
+      name: '自提点管理',
+      url: '5',
+      enable: require('../assets/image/ztdgl.png'),
+      disable: require('../assets/image/ztdgl_gray.png'),
+    },
+    {
+      name: '自有支付',
+      url: '6',
+      enable: require('../assets/image/zyzf.png'),
+      disable: require('../assets/image/zyzf_gray.png'),
+    },
+    {
+      name: '供应商管理',
+      url: '7',
+      enable: require('../assets/image/gysgl.png'),
+      disable: require('../assets/image/gysgl_gray.png'),
+    },
+    {
+      name: '设备管理',
+      url: '8',
+      enable: require('../assets/image/sbgl.png'),
+      disable: require('../assets/image/sbgl_gray.png'),
+    },
+  ],
+}
+
+const BusinessGrid = {
+  title: '商家业务',
+  list: [
+    {
+      name: '电商管理',
+      url: '1',
+      enable: require('../assets/image/dsgl.png'),
+      disable: require('../assets/image/dsgl_gray.png'),
+    },
+    {
+      name: '外卖管理',
+      url: '2',
+      enable: require('../assets/image/wmgl.png'),
+      disable: require('../assets/image/wmgl_gray.png'),
+    },
+    {
+      name: '餐饮管理',
+      url: '3',
+      enable: require('../assets/image/cygl.png'),
+      disable: require('../assets/image/cygl_gray.png'),
+    },
+    {
+      name: '酒店管理',
+      url: '4',
+      enable: require('../assets/image/jdgl.png'),
+      disable: require('../assets/image/jdgl_gray.png'),
+    },
+    {
+      name: '预约管理',
+      url: '5',
+      enable: require('../assets/image/yygl.png'),
+      disable: require('../assets/image/yygl_gray.png'),
+    },
+    {
+      name: '团购管理',
+      url: '6',
+      enable: require('../assets/image/tggl.png'),
+      disable: require('../assets/image/tggl_gray.png'),
+    },
+    {
+      name: '批发供货',
+      url: '7',
+      enable: require('../assets/image/pfgh.png'),
+      disable: require('../assets/image/pfgh_gray.png'),
+    },
+    {
+      name: '汽配管理',
+      url: '8',
+      enable: require('../assets/image/qpgl.png'),
+      disable: require('../assets/image/qpgl_gray.png'),
+    },
+  ],
+}
+
+const BillGrid = {
+  title: '商家账单',
+  list: [
+    {
+      name: '商家对账',
+      url: '1',
+      enable: require('../assets/image/sjdz.png'),
+      disable: require('../assets/image/sjdz_gray.png'),
+    },
+    {
+      name: '店员对账',
+      url: '2',
+      enable: require('../assets/image/dydz.png'),
+      disable: require('../assets/image/dydz_gray.png'),
+    },
+    {
+      name: '店铺对账',
+      url: '3',
+      enable: require('../assets/image/dpdz.png'),
+      disable: require('../assets/image/dpdz_gray.png'),
+    },
+    {
+      name: '经营统计',
+      url: '4',
+      enable: require('../assets/image/jytj.png'),
+      disable: require('../assets/image/jytj_gray.png'),
+    },
+  ],
+}
+
+const ListData = [
+  {
+    title: '汽车服务',
+    url: '1',
+    enable: true,
+    hasIcon: true,
+  },
+  {
+    title: '餐饮美食',
+    url: '2',
+    enable: true,
+    hasIcon: true,
+  },
+  {
+    title: '教育培训',
+    url: '1',
+    enable: true,
+    hasIcon: true,
+  },
+  {
+    title: '酒店旅游',
+    url: '1',
+    enable: false,
+    hasIcon: false,
+  },
+  {
+    title: '休闲娱乐',
+    url: '1',
+    enable: true,
+    hasIcon: false,
+  },
+  {
+    title: '其他行业',
+    url: '1',
+    enable: false,
+    hasIcon: true,
+  },
+]
+
+export {
+  ManagementGrid,
+  PromotionGrid,
+  AllianceGrid,
+  SettingGrid,
+  BusinessGrid,
+  BillGrid,
+  ListData,
+}

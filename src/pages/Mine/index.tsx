@@ -1,9 +1,9 @@
 import React from 'react'
 import { makeStyles, createStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
-import UserCard from '../UserCard'
-import GridCard from '../GridCard'
-import { ManagementGrid, PromotionGrid, AllianceGrid } from '../../env/constant'
+import UserCard from '../../components/UserCard'
+import GridCard from '../../components/GridCard'
+import { SettingGrid, BusinessGrid, BillGrid } from '../../env/constant'
 
 const useStyles = makeStyles(
   createStyles({
@@ -18,13 +18,13 @@ export default () => {
     <div className="bottom60">
       <UserCard />
       <Paper className={classes.paper}>
-        <GridCard data={PromotionGrid} style={{ padding: '0 0 30px 0' }} />
+        <GridCard data={SettingGrid} style={{ padding: '0 0 30px 0' }} />
       </Paper>
       <Paper className={classes.paper}>
-        <GridCard data={AllianceGrid} style={{ padding: '0 0 30px 0' }} />
+        <GridCard data={BusinessGrid} style={{ padding: '0 0 30px 0' }} />
       </Paper>
       <Paper className={classes.paper}>
-        <GridCard data={ManagementGrid} style={{ padding: '30px 0' }} />
+        <GridCard data={BillGrid} style={{ padding: '30px 0' }} />
       </Paper>
     </div>
   )
