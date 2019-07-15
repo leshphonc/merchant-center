@@ -66,8 +66,16 @@ export default function SignIn(props: any) {
       .then((data) => {
         if (!data.errorCode) {
           localStorage.setItem('ticket', data.result.ticket)
-          console.log(props)
-          props.history.push('/')
+          fetch('/index.php?g=WapMerchant&c=index&a=login', {
+            method: 'POST',
+            body,
+          })
+            .then(response => response.json())
+            .then((data2) => {
+              if (!data2.errorCode) {
+                props.history.push('/')
+              }
+            })
         }
       })
   }

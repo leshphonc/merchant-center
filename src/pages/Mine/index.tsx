@@ -24,7 +24,7 @@ export default () => {
         <GridCard data={BusinessGrid} style={{ padding: '0 0 30px 0' }} />
       </Paper>
       <Paper className={classes.paper}>
-        <GridCard data={BillGrid} style={{ padding: '30px 0' }} />
+        <GridCard data={BillGrid} style={{ padding: '0 0 30px 0' }} />
       </Paper>
     </div>
   )

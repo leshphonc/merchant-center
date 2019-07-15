@@ -1,8 +1,11 @@
 import React from 'react'
+import Fade from '@material-ui/core/Fade'
 import List from '@/components/List'
+import CircularProgress from '@material-ui/core/CircularProgress'
 
 class Marketing extends React.Component {
   state = {
+    loading: false,
     list: [],
   }
 
@@ -17,20 +20,35 @@ class Marketing extends React.Component {
       .then(response => response.json())
       .then((data) => {
         if (!data.errorCode) {
-          const arr: any = []
-          Object.keys(data.result).forEach(item => arr.push(data.result[item]))
-          this.setState({
-            list: arr,
-          })
+          const arr: object[] = []
+          Object.keys(data.result[32].menu_list[16].menu_list).forEach(item => arr.push(data.result[32].menu_list[16].menu_list[item]))
+          setTimeout(() => {
+            this.setState({
+              list: arr,
+              loading: true,
+            })
+          }, 200)
         }
       })
   }
 
   render() {
-    const { list } = this.state
+    const { list, loading } = this.state
     return (
       <div className="bottom60">
-        <List list={list} />
+        <Fade in={loading}>
+          <List list={list} />
+        </Fade>
+        <Fade in={!loading} unmountOnExit>
+          <CircularProgress
+            style={{
+              position: 'relative',
+              top: 100,
+              left: '50%',
+              marginLeft: '-20px',
+            }}
+          />
+        </Fade>
       </div>
     )
   }
