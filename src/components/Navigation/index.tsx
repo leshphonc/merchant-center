@@ -19,7 +19,7 @@ const useStyles = makeStyles({
     width: '100%',
     position: 'fixed',
     bottom: 0,
-    zIndex: 9999999,
+    zIndex: 9,
     boxShadow: '0px 0px 10px 1px #ccc',
     '&>button': {
       minWidth: 50,
@@ -123,8 +123,7 @@ export default withRouter((props: any) => {
             src={value === 'order' ? OrderIcon : OrderIconGray}
             alt=""
             className={classes.navIcon}
-          />
-)}
+          />)}
       />
       <WrappedIcon />
       <BottomNavigationAction
@@ -136,8 +135,7 @@ export default withRouter((props: any) => {
             src={value === 'marketing' ? MarketingIcon : MarketingIconGray}
             alt=""
             className={classes.navIcon}
-          />
-)}
+          />)}
       />
       <BottomNavigationAction
         classes={{ selected: classes.action }}
@@ -148,8 +146,7 @@ export default withRouter((props: any) => {
             src={value === 'mine' ? MineIcon : MineIconGray}
             alt=""
             className={classes.navIcon}
-          />
-)}
+          />)}
       />
     </BottomNavigation>
   )

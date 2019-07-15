@@ -10,7 +10,7 @@ import styles from './index.module.scss'
 
 const useStyles = makeStyles(() => createStyles({
   paper: {
-    marginTop: 10,
+    margin: '10px 8px',
   },
 }))
 export default () => {
@@ -104,7 +104,7 @@ export default () => {
       />
       <UserCard />
       <Paper className={classes.paper}>
-        <GridCard data={ManagementGrid} style={{ padding: '30px 0' }} />
+        <GridCard data={ManagementGrid} style={{ padding: '30px 0' }} imgSize={45} />
         <Grid container wrap="nowrap">
           <Grid item xs={3}>
             <div className={styles.desc}>

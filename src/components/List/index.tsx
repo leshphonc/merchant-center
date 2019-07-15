@@ -12,6 +12,14 @@ import ExpandLess from '@material-ui/icons/ExpandLess'
 import ExpandMore from '@material-ui/icons/ExpandMore'
 import DraftsIcon from '@material-ui/icons/Drafts'
 
+interface ListData {
+  data: {
+    title?: string
+    list: Array<{ name: string; url: string; enable: any; disable: any }>
+  }
+  style?: object
+}
+
 const useStyles = makeStyles((theme: Theme) => createStyles({
   root: {
     width: '100%',

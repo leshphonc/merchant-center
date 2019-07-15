@@ -9,6 +9,7 @@ interface GridData {
     list: Array<{ name: string; url: string; enable: any; disable: any }>
   }
   style?: object
+  imgSize?: number
 }
 
 export default (props: GridData) => {
@@ -16,7 +17,7 @@ export default (props: GridData) => {
     <Grid item xs={3} key={item.url}>
       <div className={styles.icon}>
         <IconButton>
-          <img src={item.enable} alt="图片丢失" />
+          <img src={item.enable} alt="图片丢失" style={{ width: props.imgSize }} />
         </IconButton>
 
         <div>{item.name}</div>
@@ -28,7 +29,9 @@ export default (props: GridData) => {
   return (
     <React.Fragment>
       {title ? <div className={styles.title}>{title}</div> : ''}
-      <Grid container style={style}>{mapGrid()}</Grid>
+      <Grid container style={style}>
+        {mapGrid()}
+      </Grid>
     </React.Fragment>
   )
 }

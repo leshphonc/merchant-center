@@ -8,7 +8,7 @@ import { SettingGrid, BusinessGrid, BillGrid } from '@/env/constant'
 const useStyles = makeStyles(
   createStyles({
     paper: {
-      marginTop: 10,
+      margin: '10px 8px',
     },
   }),
 )

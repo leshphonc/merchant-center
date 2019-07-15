@@ -36,11 +36,11 @@ export default withRouter((props: any) => {
       </Grid>
       <Grid item xs={9}>
         <Grid container direction="column" className={styles.desc}>
-          <div onClick={() => props.history.goBack()}>Hi, desing kevin 欢迎回来！</div>
+          <div>Hi, desing kevin 欢迎回来！</div>
           <div>账户余额（元）</div>
           <div>
             <div>116688.68</div>
-            <div>充值 | 提现</div>
+            <div onClick={() => props.history.push('/wallet')}>充值 | 提现</div>
           </div>
         </Grid>
       </Grid>

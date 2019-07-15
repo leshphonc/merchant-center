@@ -27,7 +27,7 @@ class Marketing extends React.Component {
               list: arr,
               loading: true,
             })
-          }, 200)
+          }, 400)
         }
       })
   }
