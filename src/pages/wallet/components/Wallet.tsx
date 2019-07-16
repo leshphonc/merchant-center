@@ -1,5 +1,5 @@
 import React from 'react'
-import { createStyles, makeStyles } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
@@ -15,7 +15,7 @@ import InboxIcon from '@material-ui/icons/Inbox'
 import DraftsIcon from '@material-ui/icons/Drafts'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 
-const useStyles = makeStyles(() => createStyles({
+const useStyles = makeStyles({
   root: {
     height: '100vh',
     background: '#fff',
@@ -37,7 +37,7 @@ const useStyles = makeStyles(() => createStyles({
     position: 'absolute',
     right: 10,
   },
-}))
+})
 export default (props: any) => {
   const classes = useStyles()
 

@@ -7,6 +7,7 @@ import { createMuiTheme } from '@material-ui/core/styles'
 import Login from '@/pages/login'
 import Index from '@/pages'
 import Wallet from '@/pages/wallet'
+import BasicInformation from '@/pages/modules/settings/basicinformation'
 
 let oldLocation: any = null
 const theme = createMuiTheme({
@@ -18,9 +19,7 @@ const theme = createMuiTheme({
 })
 const BasicRoute = (props: any) => {
   const { location, history } = props
-  console.log(props)
   let classNames = ''
-  console.log(history.action)
   if (history.action === 'PUSH') {
     classNames = 'forward-from-right'
   } else if (history.action === 'POP' && oldLocation) {
@@ -38,6 +37,7 @@ const BasicRoute = (props: any) => {
           <Switch location={location}>
             <Route path="/login" component={Login} />
             <Route path="/wallet" component={Wallet} />
+            <Route path="/basicinformation" component={BasicInformation} />
             <Route path="/" component={Index} />
           </Switch>
         </CSSTransition>

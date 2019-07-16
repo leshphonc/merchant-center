@@ -3,7 +3,7 @@ import { makeStyles, createStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import UserCard from '@/components/UserCard'
 import GridCard from '@/components/GridCard'
-import { SettingGrid, BusinessGrid, BillGrid } from '@/env/constant'
+import { SettingGrid, BusinessGrid, BillGrid } from '@/config/grid'
 
 const useStyles = makeStyles(
   createStyles({
