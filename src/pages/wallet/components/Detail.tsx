@@ -1,10 +1,6 @@
 import React from 'react'
 import { createStyles, makeStyles, useTheme } from '@material-ui/core/styles'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import Typography from '@material-ui/core/Typography'
-import IconButton from '@material-ui/core/IconButton'
-import ArrowBackIcon from '@material-ui/icons/ArrowBack'
+import NavBar from '@/components/NavBar'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import SwipeableViews from 'react-swipeable-views'
@@ -28,7 +24,7 @@ const useStyles = makeStyles(() => createStyles({
     margin: '0 auto',
   },
 }))
-export default (props: any) => {
+export default () => {
   const classes = useStyles()
   const theme = useTheme()
   const [value, setValue] = React.useState(0)
@@ -41,16 +37,7 @@ export default (props: any) => {
   }
   return (
     <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton edge="start" color="inherit" onClick={() => props.history.goBack()}>
-            <ArrowBackIcon />
-          </IconButton>
-          <Typography variant="h6" className={classes.title}>
-            账户明细
-          </Typography>
-        </Toolbar>
-      </AppBar>
+      <NavBar title="账户明细" goBack />
       <Tabs
         value={value}
         onChange={handleChange}

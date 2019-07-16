@@ -5,10 +5,12 @@ const BasicInformation = [
       {
         label: '商户账号',
         name: 'account',
+        type: 'readonly',
       },
       {
         label: '商户名称',
         name: 'account',
+        type: 'readonly',
       },
       {
         label: '联系电话',
