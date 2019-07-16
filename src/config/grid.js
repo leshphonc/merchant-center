@@ -74,7 +74,7 @@ const PromotionGrid = {
     },
     {
       name: '店员推广',
-      url: '8',
+      url: '/promotion/shopAssistant',
       enable: require('../assets/image/dytg.png'),
       disable: require('../assets/image/dytg_gray.png'),
     },
