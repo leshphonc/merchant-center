@@ -7,8 +7,8 @@ import { createMuiTheme } from '@material-ui/core/styles'
 import Login from '@/pages/login'
 import Index from '@/pages'
 import Wallet from '@/pages/wallet'
-import BasicInformation from '@/pages/modules/settings/basicinformation'
 import Promotion from '@/pages/modules/promotion'
+import Settings from '@/pages/modules/settings'
 
 let oldLocation: any = null
 const theme = createMuiTheme({
@@ -38,8 +38,8 @@ const BasicRoute = (props: any) => {
           <Switch location={location}>
             <Route path="/login" component={Login} />
             <Route path="/wallet" component={Wallet} />
-            <Route path="/basicinformation" component={BasicInformation} />
             <Route path="/promotion" component={Promotion} />
+            <Route path="/settings" component={Settings} />
             <Route path="/" component={Index} />
           </Switch>
         </CSSTransition>
