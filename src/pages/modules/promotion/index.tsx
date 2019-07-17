@@ -6,6 +6,7 @@ import ShopList from './shopAssistant/shopList'
 import ScanNumber from './shopAssistant/scanNumber'
 import FansNumber from './shopAssistant/fansNumber'
 import SaleList from './shopAssistant/saleList'
+import RedEnvelope from './redEnvelope'
 
 const useStyles = makeStyles({
   root: {
@@ -26,6 +27,7 @@ export default () => {
       <Route path="/promotion/scanNumber" component={ScanNumber} />
       <Route path="/promotion/fansNumber" component={FansNumber} />
       <Route path="/promotion/saleList" component={SaleList} />
+      <Route path="/promotion/redEnvelope" component={RedEnvelope} />
     </div>
   )
 }
