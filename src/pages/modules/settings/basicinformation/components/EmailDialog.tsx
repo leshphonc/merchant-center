@@ -6,40 +6,46 @@ import DialogContent from '@material-ui/core/DialogContent'
 import DialogActions from '@material-ui/core/DialogActions'
 import Button from '@material-ui/core/Button'
 import Snackbar from '@material-ui/core/Snackbar'
+import InputBase from '@material-ui/core/InputBase'
 
 const useStyles = makeStyles({
+  paper: {
+    width: '80%',
+  },
   input: {
     width: '100%',
   },
 })
+
 export interface ConfirmationDialogRawProps {
-  classes: Record<'paper', string>
   open: boolean
-  value: string
-  ele: any
-  reg?: string
   onClose: (value?: string) => void
 }
 export default (props: ConfirmationDialogRawProps) => {
   const classes = useStyles()
-  const {
-    onClose, open, value: valueProp, reg, ele, ...other
-  } = props
-  console.log(props)
-  const [openBar, setopenBar] = React.useState(false)
+  const [openBar, setOpenBar] = React.useState(false)
+  const { open, onClose, ...other } = props
+
   function handleCancel() {
     onClose()
   }
 
   function handleOk() {
-    if (reg) {
-    }
+    setOpenBar(true)
   }
-
   return (
-    <Dialog disableBackdropClick disableEscapeKeyDown maxWidth="xs" open={open} {...other}>
-      <DialogTitle>{valueProp}</DialogTitle>
-      <DialogContent dividers>{ele}</DialogContent>
+    <Dialog
+      disableBackdropClick
+      disableEscapeKeyDown
+      maxWidth="xs"
+      open={open}
+      classes={{ paper: classes.paper }}
+      {...other}
+    >
+      <DialogTitle>修改商家邮箱</DialogTitle>
+      <DialogContent dividers>
+        <InputBase className={classes.input} autoFocus type="email" />
+      </DialogContent>
       <DialogActions>
         <Button onClick={handleCancel} color="primary">
           取消

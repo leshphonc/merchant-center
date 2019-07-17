@@ -42,9 +42,9 @@ export default (props: ConfirmationDialogRawProps) => {
       classes={{ paper: classes.paper }}
       {...other}
     >
-      <DialogTitle>修改联系电话</DialogTitle>
+      <DialogTitle>修改商户描述</DialogTitle>
       <DialogContent dividers>
-        <InputBase className={classes.input} autoFocus type="tel" />
+        <InputBase className={classes.input} autoFocus rows={5} multiline />
       </DialogContent>
       <DialogActions>
         <Button onClick={handleCancel} color="primary">

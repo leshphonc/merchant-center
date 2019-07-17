@@ -14,6 +14,11 @@ import Chip from '@material-ui/core/Chip'
 import Tooltip from '@material-ui/core/Tooltip'
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline'
 import TelDialog from './components/TelDialog'
+import EmailDialog from './components/EmailDialog'
+import MapDialog from './components/MapDialog.jsx'
+import CropperImg from './components/CropperImg.jsx'
+import DescDialog from './components/DescDialog'
+import DetailDialog from './components/DetailDialog'
 
 const useStyles = makeStyles({
   root: {
@@ -67,11 +72,11 @@ export default () => {
   const classes = useStyles()
   const [checked, setChecked] = React.useState(true)
   const [openTel, setOpenTel] = React.useState(false)
-
-  const closeTelDialog = () => {
-    setOpenTel(false)
-  }
-
+  const [openEmail, setOpenEmail] = React.useState(false)
+  const [openMap, setOpenMap] = React.useState(false)
+  const [openImg, setOpenImg] = React.useState(false)
+  const [openDesc, setOpenDesc] = React.useState(false)
+  const [openDetail, setOpenDetail] = React.useState(false)
   // const mapList = () => BasicInformation.map(item => (
   //   <List key={item.label} subheader={<ListSubheader>{item.label}</ListSubheader>}>
   //     <Divider />
@@ -149,7 +154,7 @@ export default () => {
         </ListItem>
 
         <Divider />
-        <ListItem button className={classes.listItem}>
+        <ListItem button className={classes.listItem} onClick={() => setOpenEmail(true)}>
           <ListItemText
             primary={(
               <div className={classes.listText}>
@@ -207,7 +212,7 @@ export default () => {
         </ListItem>
 
         <Divider />
-        <ListItem button className={classes.listItem}>
+        <ListItem button className={classes.listItem} onClick={() => setOpenMap(true)}>
           <ListItemText
             primary={(
               <div className={classes.listText}>
@@ -269,7 +274,7 @@ export default () => {
 
       <List subheader={<ListSubheader>商家描述</ListSubheader>}>
         <Divider />
-        <ListItem button className={classes.listItem}>
+        <ListItem button className={classes.listItem} onClick={() => setOpenDesc(true)}>
           <ListItemText
             primary={(
               <div className={classes.listText}>
@@ -288,7 +293,7 @@ export default () => {
         </ListItem>
 
         <Divider />
-        <ListItem button className={classes.listItem}>
+        <ListItem button className={classes.listItem} onClick={() => setOpenImg(true)}>
           <ListItemText
             primary={(
               <div className={classes.listText}>
@@ -311,7 +316,7 @@ export default () => {
         </ListItem>
 
         <Divider />
-        <ListItem button className={classes.listItem}>
+        <ListItem button className={classes.listItem} onClick={() => setOpenDetail(true)}>
           <ListItemText
             primary={(
               <div className={classes.listText}>
@@ -343,7 +348,12 @@ export default () => {
         </ListItem>
         <Divider />
       </List>
-      <TelDialog open={openTel} onClose={closeTelDialog} />
+      <TelDialog open={openTel} onClose={() => setOpenTel(false)} />
+      <EmailDialog open={openEmail} onClose={() => setOpenEmail(false)} />
+      <MapDialog open={openMap} onClose={() => setOpenMap(false)} />
+      <CropperImg open={openImg} onClose={() => setOpenImg(false)} />
+      <DescDialog open={openDesc} onClose={() => setOpenDesc(false)} />
+      <DetailDialog open={openDetail} onClose={() => setOpenDetail(false)} />
     </div>
   )
 }
