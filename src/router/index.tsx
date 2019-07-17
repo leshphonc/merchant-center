@@ -1,6 +1,8 @@
 import React from 'react'
 import { Switch, Route, withRouter } from 'react-router-dom'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
+import { MuiPickersUtilsProvider } from '@material-ui/pickers'
+import MomentUtils from '@date-io/moment'
 import { ThemeProvider } from '@material-ui/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { createMuiTheme } from '@material-ui/core/styles'
@@ -28,23 +30,25 @@ const BasicRoute = (props: any) => {
   }
   oldLocation = location
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <TransitionGroup
-        className="router-wrapper"
-        childFactory={child => React.cloneElement(child, { classNames })}
-      >
-        <CSSTransition timeout={500} key={location.pathname}>
-          <Switch location={location}>
-            <Route path="/login" component={Login} />
-            <Route path="/wallet" component={Wallet} />
-            <Route path="/promotion" component={Promotion} />
-            <Route path="/settings" component={Settings} />
-            <Route path="/" component={Index} />
-          </Switch>
-        </CSSTransition>
-      </TransitionGroup>
-    </ThemeProvider>
+    <MuiPickersUtilsProvider utils={MomentUtils}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <TransitionGroup
+          className="router-wrapper"
+          childFactory={child => React.cloneElement(child, { classNames })}
+        >
+          <CSSTransition timeout={500} key={location.pathname}>
+            <Switch location={location}>
+              <Route path="/login" component={Login} />
+              <Route path="/wallet" component={Wallet} />
+              <Route path="/promotion" component={Promotion} />
+              <Route path="/settings" component={Settings} />
+              <Route path="/" component={Index} />
+            </Switch>
+          </CSSTransition>
+        </TransitionGroup>
+      </ThemeProvider>
+    </MuiPickersUtilsProvider>
   )
 }
 
