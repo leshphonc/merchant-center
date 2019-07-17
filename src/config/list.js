@@ -15,14 +15,17 @@ const BasicInformation = [
       {
         label: '联系电话',
         name: 'account',
+        reg: 'tel',
       },
       {
         label: '商家邮箱',
         name: 'account',
+        reg: 'email',
       },
       {
         label: '团购快递收货超时时间',
         name: 'account',
+        reg: 'date',
       },
       {
         label: '线下支付权限',
