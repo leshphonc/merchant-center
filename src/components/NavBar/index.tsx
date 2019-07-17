@@ -25,10 +25,12 @@ const useStyles = makeStyles({
     textAlign: 'center',
     width: 100,
     margin: '0 auto',
+    color: '#fff',
   },
   rightIcon: {
     position: 'absolute',
     right: 10,
+    color: '#fff',
   },
 })
 export default withRouter((props: any) => {
@@ -42,24 +44,26 @@ export default withRouter((props: any) => {
   }
   const { title, rightBtn } = props
   return (
-    <AppBar position="static">
-      <Toolbar>
-        <IconButton edge="start" color="inherit" onClick={goBack}>
-          <ArrowBackIcon />
-        </IconButton>
-        <Typography variant="h6" className={classes.title}>
-          {title}
-        </Typography>
-        {rightBtn ? (
-          <Button
-            color="inherit"
-            className={classes.rightIcon}
-            onClick={() => props.history.push(rightBtn.url)}
-          >
-            {rightBtn.label}
-          </Button>
-        ) : null}
-      </Toolbar>
-    </AppBar>
+    <div style={{ height: 56 }}>
+      <AppBar position="fixed">
+        <Toolbar>
+          <IconButton edge="start" color="inherit" onClick={goBack}>
+            <ArrowBackIcon style={{ color: '#fff' }} />
+          </IconButton>
+          <Typography variant="h6" className={classes.title}>
+            {title}
+          </Typography>
+          {rightBtn ? (
+            <Button
+              color="inherit"
+              className={classes.rightIcon}
+              onClick={() => props.history.push(rightBtn.url)}
+            >
+              {rightBtn.label}
+            </Button>
+          ) : null}
+        </Toolbar>
+      </AppBar>
+    </div>
   )
 })

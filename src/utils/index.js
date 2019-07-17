@@ -32,4 +32,15 @@ export default {
     // 分享到QQ空间（即将废弃 now:2019.6.22）
     wx.onMenuShareQZone(shareInfo)
   },
+  matchExp(rule, value) {
+    const REGS = {
+      name: '/^[\\u4e00-\\u9fa5A-Za-z()]+$/',
+      number: '/^[0-9.]*$/',
+      account: '/^[A-Za-z0-9]{1,30}$/',
+      password: '/^(\\w){6,16}$/',
+      tel: '/^[1][3-9][0-9]{9}$/',
+      email: '/^([A-Za-z0-9_\\-\\.])+\\@([A-Za-z0-9_\\-\\.])+\\.([A-Za-z]{2,4})$/',
+    }
+    return new RegExp(REGS[rule]).test(value)
+  },
 }
