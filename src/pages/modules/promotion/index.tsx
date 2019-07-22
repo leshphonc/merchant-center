@@ -7,6 +7,7 @@ import ShopAssistant from './shopAssistant'
 // import FansNumber from './shopAssistant/fansNumber'
 // import SaleList from './shopAssistant/saleList'
 
+
 const useStyles = makeStyles({
   root: {
     position: 'absolute',
@@ -22,10 +23,6 @@ export default () => {
   return (
     <div className={classes.root}>
       <Route path="/promotion/shopAssistant" component={ShopAssistant} />
-      {/* <Route path="/promotion/shopList" component={ShopList} />
-      <Route path="/promotion/scanNumber" component={ScanNumber} />
-      <Route path="/promotion/fansNumber" component={FansNumber} />
-      <Route path="/promotion/saleList" component={SaleList} /> */}
     </div>
   )
 }

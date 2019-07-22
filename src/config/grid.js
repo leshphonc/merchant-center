@@ -56,7 +56,7 @@ const PromotionGrid = {
     },
     {
       name: '红包推广',
-      url: '5',
+      url: '/promotion/redEnvelope',
       enable: require('../assets/image/hbtg.png'),
       disable: require('../assets/image/hbtg_gray.png'),
     },
