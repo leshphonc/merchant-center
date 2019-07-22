@@ -45,9 +45,9 @@ export default withRouter((props: any) => {
           </div>
         </div>
         <div style={{ padding: '3% 0', display: 'flex', justifyContent: 'space-between' }}>
-          <span style={{ padding: '2vw 6.5vw', background: '#ffb000' }} onClick={() => props.history.push('/promotion/scanNumber')}>扫码人数(0)</span>
-          <span style={{ padding: '2vw 6.5vw', background: '#ffb000' }} onClick={() => props.history.push('/promotion/fansNumber')}>绑粉人数(0)</span>
-          <span style={{ padding: '2vw 6.5vw', background: '#ffb000' }} onClick={() => props.history.push('/promotion/saleList')}>购买人数(0)</span>
+          <span style={{ padding: '2vw 5.5vw', background: '#ffb000' }} onClick={() => props.history.push('/promotion/shopAssistant/scanNumber')}>扫码人数(0)</span>
+          <span style={{ padding: '2vw 5.5vw', background: '#ffb000' }} onClick={() => props.history.push('/promotion/shopAssistant/fansNumber')}>绑粉人数(0)</span>
+          <span style={{ padding: '2vw 5.5vw', background: '#ffb000' }} onClick={() => props.history.push('/promotion/shopAssistant/saleList')}>购买人数(0)</span>
         </div>
       </div>
     </div>

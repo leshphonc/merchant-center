@@ -82,6 +82,14 @@ const useStyles = makeStyles({
     height: '4vw',
     marginTop: '2%',
   },
+  MuiAvataRroot: {
+    width: '18%',
+    '&>img': {
+      width: '10vw',
+      height: '10vw',
+      borderRadius: '50%',
+    },
+  },
 })
 export default () => {
   const classes = useStyles()
@@ -115,10 +123,10 @@ export default () => {
       </div>
       <div style={{ marginTop: '0.5%', background: '#fff' }}>
         <div className={classes.navlist}>
-          <Avatar src={require('@/assets/image/avatar.jpeg')} style={{ borderRadius: '50%', width: '10vw', height: '10vw' }} />
-          <span>小雅</span>
-          <span>2019-07-12 11：25</span>
-          <span>100</span>
+          <Avatar src={require('@/assets/image/avatar.jpeg')} style={{ }} className={classes.MuiAvataRroot} />
+          <span style={{ width: '18%', textAlign: 'center' }}>小雅</span>
+          <span style={{ width: '34%', textAlign: 'center' }}>2019-07-12 11：25</span>
+          <span style={{ width: '20%', textAlign: 'center' }}>100</span>
         </div>
       </div>
       <div className={classes.page}>

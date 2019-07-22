@@ -1,11 +1,11 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Route } from 'react-router-dom'
-import ShopAssistant from './shopAssistant/index'
-import ShopList from './shopAssistant/shopList'
-import ScanNumber from './shopAssistant/scanNumber'
-import FansNumber from './shopAssistant/fansNumber'
-import SaleList from './shopAssistant/saleList'
+import ShopAssistant from './shopAssistant'
+// import ShopList from './shopAssistant/shopList'
+// import ScanNumber from './shopAssistant/scanNumber'
+// import FansNumber from './shopAssistant/fansNumber'
+// import SaleList from './shopAssistant/saleList'
 
 const useStyles = makeStyles({
   root: {
@@ -22,10 +22,10 @@ export default () => {
   return (
     <div className={classes.root}>
       <Route path="/promotion/shopAssistant" component={ShopAssistant} />
-      <Route path="/promotion/shopList" component={ShopList} />
+      {/* <Route path="/promotion/shopList" component={ShopList} />
       <Route path="/promotion/scanNumber" component={ScanNumber} />
       <Route path="/promotion/fansNumber" component={FansNumber} />
-      <Route path="/promotion/saleList" component={SaleList} />
+      <Route path="/promotion/saleList" component={SaleList} /> */}
     </div>
   )
 }
