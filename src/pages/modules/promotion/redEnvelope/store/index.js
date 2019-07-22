@@ -1,10 +1,10 @@
 // redEnvelope.js
 
 // Actions
-const LOAD = 'redEnvelope/LOAD'
-const CREATE = 'redEnvelope/CREATE'
-const UPDATE = 'redEnvelope/UPDATE'
-const REMOVE = 'redEnvelope/REMOVE'
+export const LOAD = 'redEnvelope/LOAD'
+export const CREATE = 'redEnvelope/CREATE'
+export const UPDATE = 'redEnvelope/UPDATE'
+export const REMOVE = 'redEnvelope/REMOVE'
 
 const initialState = {
   redEnvelopeList: [],

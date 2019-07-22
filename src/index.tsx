@@ -4,11 +4,11 @@ import { BrowserRouter } from 'react-router-dom'
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import createSagaMiddleware from 'redux-saga'
-import rootSaga from '@/sagas'
-import Routes from './router'
-import './index.scss'
-import rootReducer from './store/index'
-import * as serviceWorker from './serviceWorker'
+import rootSaga from '@/store/saga'
+import Routes from '@/router'
+import '@/index.scss'
+import rootReducer from '@/store/index'
+import * as serviceWorker from '@/serviceWorker'
 
 const sagaMiddleware = createSagaMiddleware()
 const store = createStore(rootReducer, applyMiddleware(sagaMiddleware))

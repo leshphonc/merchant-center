@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 import RedEnvelopeList from './list'
-import RedEnvelopePublish from './publish.jsx'
+import RedEnvelopePublish from './publish'
 
 export default () => (
   <React.Fragment>

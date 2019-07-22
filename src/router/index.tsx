@@ -11,6 +11,7 @@ import Index from '@/pages'
 import Wallet from '@/pages/wallet'
 import Promotion from '@/pages/modules/promotion'
 import Settings from '@/pages/modules/settings'
+import "moment/locale/zh-cn"
 
 let oldLocation: any = null
 const theme = createMuiTheme({
