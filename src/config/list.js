@@ -1,3 +1,5 @@
+import Avatar from '@/assets/image/avatar.jpeg'
+
 const BasicInformation = [
   {
     label: '基本信息',
@@ -160,4 +162,129 @@ const RedEnvelopeListData = [
   },
 ]
 
-export { BasicInformation, RedEnvelopeListData }
+const StoreList = [
+  {
+    title: '是三十九分',
+    img: Avatar,
+    status: '正常',
+    fl: '/',
+    yh: '/',
+    bj: '/',
+    tj: '/',
+  },
+  {
+    title: '是三十九分',
+    img: Avatar,
+    status: '正常',
+    fl: '/',
+    yh: '/',
+    bj: '/',
+    tj: '/',
+  },
+  {
+    title: '是三十九分',
+    img: Avatar,
+    status: '正常',
+    fl: '/',
+    yh: '/',
+    bj: '/',
+    tj: '/',
+  },
+  {
+    title: '是三十九分',
+    img: Avatar,
+    status: '正常',
+    fl: '/',
+    yh: '/',
+    bj: '/',
+    tj: '/',
+  },
+  {
+    title: '是三十九分',
+    img: Avatar,
+    status: '正常',
+    fl: '/',
+    yh: '/',
+    bj: '/',
+    tj: '/',
+  },
+  {
+    title: '是三十九分',
+    img: Avatar,
+    status: '正常',
+    fl: '/',
+    yh: '/',
+    bj: '/',
+    tj: '/',
+  },
+  {
+    title: '是三十九分',
+    img: Avatar,
+    status: '正常',
+    fl: '/',
+    yh: '/',
+    bj: '/',
+    tj: '/',
+  },
+  {
+    title: '是三十九分',
+    img: Avatar,
+    status: '正常',
+    fl: '/',
+    yh: '/',
+    bj: '/',
+    tj: '/',
+  },
+  {
+    title: '是三十九分',
+    img: Avatar,
+    status: '正常',
+    fl: '/',
+    yh: '/',
+    bj: '/',
+    tj: '/',
+  },
+]
+
+const StoreCategoryData = [
+  {
+    title: '水果',
+    day: ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日'],
+    management: '/',
+    modify: '/',
+  },
+  {
+    title: '水果',
+    day: ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日'],
+    management: '/',
+    modify: '/',
+  },
+  {
+    title: '水果',
+    day: ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日'],
+    management: '/',
+    modify: '/',
+  },
+  {
+    title: '水果',
+    day: ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日'],
+    management: '/',
+    modify: '/',
+  },
+  {
+    title: '水果',
+    day: ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日'],
+    management: '/',
+    modify: '/',
+  },
+  {
+    title: '水果',
+    day: ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日'],
+    management: '/',
+    modify: '/',
+  },
+]
+
+export {
+  BasicInformation, RedEnvelopeListData, StoreList, StoreCategoryData,
+}

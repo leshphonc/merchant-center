@@ -11,7 +11,8 @@ import Index from '@/pages'
 import Wallet from '@/pages/wallet'
 import Promotion from '@/pages/modules/promotion'
 import Settings from '@/pages/modules/settings'
-import "moment/locale/zh-cn"
+import StoreFront from '@/pages/modules/management/storefront'
+import 'moment/locale/zh-cn'
 
 let oldLocation: any = null
 const theme = createMuiTheme({
@@ -42,6 +43,7 @@ const BasicRoute = (props: any) => {
             <Switch location={location}>
               <Route path="/login" component={Login} />
               <Route path="/wallet" component={Wallet} />
+              <Route path="/storeFront" component={StoreFront} />
               <Route path="/promotion" component={Promotion} />
               <Route path="/settings" component={Settings} />
               <Route path="/" component={Index} />

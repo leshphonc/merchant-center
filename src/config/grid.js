@@ -2,7 +2,7 @@ const ManagementGrid = {
   list: [
     {
       name: '店铺管理',
-      url: '1',
+      url: '/storefront',
       enable: require('../assets/image/dpgl.png'),
       disable: require('../assets/image/dpgl_gray.png'),
     },
