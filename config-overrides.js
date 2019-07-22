@@ -1,4 +1,6 @@
-const { override, addWebpackAlias, addWebpackExternals } = require('customize-cra')
+const {
+  override, addWebpackAlias, addWebpackExternals, addBabelPlugin,
+} = require('customize-cra')
 const path = require('path')
 
 module.exports = override(
@@ -9,4 +11,5 @@ module.exports = override(
     BMap: 'BMap',
     BMapLib: 'BMapLib',
   }),
+  addBabelPlugin(['@babel/plugin-proposal-decorators', { legacy: true }]),
 )
