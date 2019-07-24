@@ -23,7 +23,7 @@ const useStyles = makeStyles({
     left: 0,
     right: 0,
     textAlign: 'center',
-    width: 100,
+    width: 140,
     margin: '0 auto',
     color: '#fff',
   },

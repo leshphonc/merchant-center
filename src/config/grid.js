@@ -20,7 +20,7 @@ const ManagementGrid = {
     },
     {
       name: '会员管理',
-      url: '4',
+      url: '/management/member',
       enable: require('../assets/image/hygl.png'),
       disable: require('../assets/image/hygl_gray.png'),
     },
