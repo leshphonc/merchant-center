@@ -6,10 +6,9 @@ import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import Badge from '@material-ui/core/Badge'
 import SwipeableViews from 'react-swipeable-views'
-import { Title } from './styled'
-import StoreList from './components/StoreList'
+import { Title } from '../styled'
+import StoreList from '../components/StoreList'
 import { StoreList as LLS } from '@/config/list'
-import AnimationBox from '@/styled'
 
 const useStyle = makeStyles({
   badge: {
@@ -20,7 +19,7 @@ export default () => {
   const classes = useStyle()
   const [value, setValue] = React.useState(0)
   return (
-    <AnimationBox>
+    <React.Fragment>
       <NavBar title="店铺管理" goBack />
       <Title>
         请选择店铺类型
@@ -70,6 +69,6 @@ export default () => {
         <StoreList list={LLS} />
         <StoreList list={LLS} />
       </SwipeableViews>
-    </AnimationBox>
+    </React.Fragment>
   )
 }

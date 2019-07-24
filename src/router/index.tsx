@@ -11,7 +11,8 @@ import Index from '@/pages'
 import Wallet from '@/pages/wallet'
 import Promotion from '@/pages/modules/promotion'
 import Settings from '@/pages/modules/settings'
-import StoreFront from '@/pages/modules/management/storefront'
+import StoreFront from '@/pages/modules/management'
+import ScrollToTop from '@/components/ScrollToTop/ScrollToTop'
 import 'moment/locale/zh-cn'
 
 let oldLocation: any = null
@@ -35,6 +36,7 @@ const BasicRoute = (props: any) => {
     <MuiPickersUtilsProvider utils={MomentUtils}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
+        <ScrollToTop />
         <TransitionGroup
           className="router-wrapper"
           childFactory={child => React.cloneElement(child, { classNames })}
@@ -43,7 +45,7 @@ const BasicRoute = (props: any) => {
             <Switch location={location}>
               <Route path="/login" component={Login} />
               <Route path="/wallet" component={Wallet} />
-              <Route path="/storeFront" component={StoreFront} />
+              <Route path="/management" component={StoreFront} />
               <Route path="/promotion" component={Promotion} />
               <Route path="/settings" component={Settings} />
               <Route path="/" component={Index} />

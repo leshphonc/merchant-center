@@ -285,6 +285,89 @@ const StoreCategoryData = [
   },
 ]
 
+const PreferentialData = [
+  {
+    type: '新单',
+    amount: 11000,
+    preferential: 21.2,
+    status: '启用',
+  },
+  {
+    type: '新单',
+    amount: 11000,
+    preferential: 21.2,
+    status: '启用',
+  },
+  {
+    type: '新单',
+    amount: 11000,
+    preferential: 21.2,
+    status: '启用',
+  },
+  {
+    type: '新单',
+    amount: 11000,
+    preferential: 21.2,
+    status: '启用',
+  },
+  {
+    type: '新单',
+    amount: 11000,
+    preferential: 21.2,
+    status: '启用',
+  },
+  {
+    type: '新单',
+    amount: 11000,
+    preferential: 21.2,
+    status: '启用',
+  },
+  {
+    type: '新单',
+    amount: 11000,
+    preferential: 21.2,
+    status: '启用',
+  },
+]
+
+const CommodityData = [{
+  title: '10.29测试电商余额支付-引流佣金（100元）',
+  img: Avatar,
+  saler: 10000,
+  status: '在售',
+  saled: 235,
+}, {
+  title: '10.29测试电商余额支付-引流佣金（100元）',
+  img: Avatar,
+  saler: 10000,
+  status: '在售',
+  saled: 235,
+}, {
+  title: '10.29测试电商余额支付-引流佣金（100元）',
+  img: Avatar,
+  saler: 10000,
+  status: '在售',
+  saled: 235,
+}, {
+  title: '10.29测试电商余额支付-引流佣金（100元）',
+  img: Avatar,
+  saler: 10000,
+  status: '在售',
+  saled: 235,
+}, {
+  title: '10.29测试电商余额支付-引流佣金测试测试测试测试（100元）',
+  img: Avatar,
+  saler: 10000,
+  status: '在售',
+  saled: 235,
+}, {
+  title: '10.29测试电商余额支付-引流佣金（100元）',
+  img: Avatar,
+  saler: 10000,
+  status: '在售',
+  saled: 235,
+}]
+
 export {
-  BasicInformation, RedEnvelopeListData, StoreList, StoreCategoryData,
+  BasicInformation, RedEnvelopeListData, StoreList, StoreCategoryData, PreferentialData, CommodityData,
 }
